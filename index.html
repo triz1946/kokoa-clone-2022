@@ -2,27 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>welcom to kokoa talk</title>
 </head>
 
 <body>
-    <div id="status-bar">
+    <div class="status-bar">
         <div class="status-bar__column">
             <span>no service</span>
+            <i class="fa-solid fa-wifi-fair"></i>
         </div>
-        <!--to do:wifi icon-->
         <div class="status-bar__column">
             <span>18:43</span>
         </div>
         <div class="status-bar__column">
             <span>110%</span>
         </div>
-        <!--to do:battery-->
-        <!--to do:lighithing icon-->
+        <script src="http://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
     </div>
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">welcome to kokoa talk</h1>
+        <p class="welcome-header__text">
+            if you have a kokoa account, log in with your email or phone number
+        </p>
+    </header>
+
+    <form id="login-form">
+        <input type="text" placeholder="email or phone number" />
+        <input type="password" placeholder="password" />
+        <input type="submit" value="log in" />
+        <a href="#">find kokoa account or password</a>
+    </form>
+
+
 
 </body>
 
