@@ -1,0 +1,33 @@
+.status-bar {
+  position: sticky;
+  /* 보미가 해결해줌.. 천재인가 */
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px 3px;
+}
+
+.status-bar__column {
+  width: 33%;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status-bar__column .fa-battery-full {
+  margin: 0px 3px;
+}
+
+.status-bar__column .fa-user-lock {
+  margin: 0px 3px;
+}

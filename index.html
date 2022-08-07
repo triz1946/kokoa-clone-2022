@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends - Kokoa Clone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/75f55f0a8e.js" crossorigin="anonymous"></script>
+    <title>Welcome to KokoaTalk</title>
 </head>
 
 <body>
@@ -15,35 +17,35 @@
             <i class="fas fa-wifi"></i>
         </div>
         <div class="status-bar__column">
-            <span>18:43</span>
+            <span id="datetime"></span>
         </div>
         <div class="status-bar__column">
-            <span>110%</span>
-            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-user-lock"></i>
+            <span>100%</span>
+            <i class="fas fa-battery-full"></i>
             <i class="fas fa-bolt"></i>
         </div>
+
     </div>
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__btn">
-                <a class="nav__link" href="friends.html"><i class="fas fa-user fa-lg"></i><i
-                        class="fas fa-user fa-2x"></i></a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="#"><i class="far fa-comment fa-lg"></i></a>
-                <a class="nav__link" href="#"><i class="far fa-comment fa-2x"></i></a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="#"><i class="fas fa-search fa-lg"></i></a>
-                <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="#"><i class="fas fa-ellipsis-h fa-lg"></i><i
-                        class="fas fa-ellipsis-h fa-2x"></i></a>
-            </li>
-        </ul>
-    </nav>
-    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to KokoaTalk</h1>
+        <p class="welcome-header__text">If you have a Kokoa Account,<br />log in with your email or phone number.</p>
+    </header>
+
+    <form action="friends.html" method="get" id="login-form">
+        <input name="username" type="text" required placeholder="Email or phone number">
+        <input name="password" type="password" required placeholder="Password" minlength="10">
+        <input type="submit" value="Log In">
+        <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <!-- current time -->
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+    </script>
+    </script>
 </body>
 
 </html>
